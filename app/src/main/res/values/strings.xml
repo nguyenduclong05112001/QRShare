@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Share and Splice</string>
+
+    <string name="text_present_big">Just 1 click split your bill</string>
+    <string name="text_present_small">Easy way to split bill with your friends colleague &amp; anyone</string>
+    <string name="text_present_of_image">Bill pay &amp; splitter</string>
+    <string name="text_ask_option">What option do you want?</string>
+    <string name="go">GO</string>
+    <string name="create_qr">Create My QR</string>
+    <string name="split_bill">Share Bill Now</string>
+    <string name="title_create_my_qr">Create My QR</string>
+    <string name="phone_number">Phone number</string>
+    <string name="amount_money">Amount money</string>
+    <string name="amount_people">Amount people</string>
+    <string name="money_for_person">Money for personal</string>
+    <string name="description">Description</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="enter_your_amount_money">Enter your amount money</string>
+    <string name="enter_amount_people_splice">Enter amount people to splice</string>
+    <string name="enter_your_description">Enter your description</string>
+</resources>
