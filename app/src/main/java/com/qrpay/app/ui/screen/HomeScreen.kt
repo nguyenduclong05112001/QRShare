@@ -515,7 +515,14 @@ fun ContentOfUser(
 
     val bitmap by remember {
         mutableStateOf(
-            user.avatar.convert()
+            try {
+                user.avatar.convert()
+            } catch (ex: Exception) {
+                convertResToBitmap(
+                    context = context,
+                    res = resApp.drawable.avatar_empty
+                )
+            }
         )
     }
 
@@ -624,18 +631,16 @@ fun ContentOfUser(
                         horizontal = GetDimension.dimensionOf(res = resDimension.dimen._10sdp)
                     )
             ) {
-                user?.let {
-                    Text(
-                        modifier = Modifier
-                            .align(Alignment.Center),
-                        text = it.numberPhone,
-                        style = TextStyle(
-                            fontSize = GetDimension.dimensionOfText(res = resDimension.dimen._12sdp),
-                            fontWeight = FontWeight.Bold,
-                            color = white
-                        )
+                Text(
+                    modifier = Modifier
+                        .align(Alignment.Center),
+                    text = user.numberPhone,
+                    style = TextStyle(
+                        fontSize = GetDimension.dimensionOfText(res = resDimension.dimen._12sdp),
+                        fontWeight = FontWeight.Bold,
+                        color = white
                     )
-                }
+                )
             }
         }
     }
